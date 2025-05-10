@@ -112,14 +112,14 @@
 		control_layer {
 // ------------------------------------------------------------------------------------------------
 // |  reset   |     |     |     |     |     |     |     |     |     |      |     |     |  BT_CLR   |
-// | OUT_TOG | BT1 | BT2 | BT3 | BT4 |     |     |     |     |     |      |     |     |           |
+// | OUT_TOG | BT1 | BT2 | BT3 | BT4 |     |     |studio unlock     |     |     |      |     |     |           |
 // |     |     |     |     |     |     |     |     |     |     |      |     |     |           |
 // |     |     |      |      |      |   bootloader   |     |     |     |     |     |                  |
 // |     |      |      |          RGB TOGGLE                   |  |       |       |    |
 // ------------------------------------------------------------------------------------------------
 			bindings = <
 	&sys_reset  &trans    &trans    &trans  &trans  &trans &trans  &trans  &trans   &trans   &trans  &trans &trans  &bt BT_CLR
-	&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans &trans  &trans   &trans   &trans   &trans  &trans    &trans &trans
+	&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans &trans  &studio_unlock   &trans   &trans   &trans  &trans    &trans &trans
 	&trans   &trans  &trans  &trans &trans &trans &trans &trans  &trans   &trans   &trans   &trans        &trans
 	&trans    &trans    &trans    &trans   &trans  &bootloader      &trans          &trans          &trans   &trans   &trans    &trans
 	&trans  &trans   &trans                      &rgb_ug RGB_TOG                         &trans      &trans      &trans     &trans
