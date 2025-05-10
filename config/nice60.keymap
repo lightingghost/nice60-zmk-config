@@ -23,12 +23,12 @@
            		mods = <(LGUI|LSHIFT|RGUI|RSHIFT)>;
 			keep-mods = <(LSHIFT|RSHIFT)>;
 		};
-//		shiftcaps: shift_capslock {
-//		    compatible = "zmk,behavior-tap-dance";
-//		    #binding-cells = <0>;
-//		    tapping-term-ms = <100>;
-//		    bindings = <&kp LSHIFT>, <&kp CAPS>;
-//		};
+		shiftcaps: shift_capslock {
+		    compatible = "zmk,behavior-tap-dance";
+		    #binding-cells = <0>;
+		    tapping-term-ms = <100>;
+		    bindings = <&kp RSHIFT>, <&kp CAPS>;
+		};
 	};
 	
 	macros {
@@ -62,15 +62,15 @@
 // ------------------------------------------------------------------------------------------
 // | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   BKSP   |
 // | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   "|"   |
-// | lt(1,CAPS)  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |     ENTER    |
-// |  SHIFT  |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |      mt(SHIFT,UP)     |
+// | mo(1)  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |     ENTER    |
+// |  shiftcaps  |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |      mt(SHIFT,UP)     |
 // |  CTL  |  WIN  |  ALT  |            SPACE              |  lt(1, DEL)  |  LEFT  |  DOWN |  lt(2, RIGHT)  |
 // ------------------------------------------------------------------------------------------
 			bindings = <
 	&tlesc  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp EQUAL  &kp BSPC
 	&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LBKT  &kp RBKT  &kp BSLH
-	&lt 1 CAPS   &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI &kp SQT           &kp RET
-	&kp RSHIFT   &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH       &mt RSHFT UP
+	&mo 1   &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI &kp SQT           &kp RET
+	&shiftcaps   &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH       &mt RSHFT UP
 	&kp LCTRL &kp LALT &kp LGUI             &kp SPACE                     &lt 1 DEL  &kp LEFT  &kp DOWN   &lt 2 RIGHT
 			>;
 		};
